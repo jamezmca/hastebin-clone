@@ -29,13 +29,14 @@ app.get('/new', (req, res) => {
 })
 
 app.post('/save', async (res, req) => {
-    const value = req.body.value
-    try {
-        const document = await Document.create({ value })
-        res.redirect(`/${document.id}`)
-    } catch (err) {
-        res.render('new', { value })
-    }
+    console.log(req)
+    // const value = req.body.value
+    // try {
+    //     const document = await Document.create({ value })
+    //     res.redirect(`/${document.id}`)
+    // } catch (err) {
+    //     res.render('new', { value })
+    // }
 })
 
 app.get('/:id', async (req, res) => {
